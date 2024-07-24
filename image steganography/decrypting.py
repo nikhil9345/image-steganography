@@ -26,22 +26,21 @@ def decode_message_column_wise(original_image_path, encrypted_image_path, passwo
             # Get the pixel values from both images
             r_orig, g_orig, b_orig = original_image.getpixel((j, i))
             r_enc, g_enc, b_enc = encrypted_image.getpixel((j, i))
-            # Decode the character from the blue channel of the pixel
-            encoded_value = (b_enc - b_orig - int(password)) % 256
+            # Decode the character from the red channel of the pixel
+            encoded_value = (r_enc - r_orig - int(password)) % 256
             decrypted_character = c[encoded_value]
             decrypted_message.append(decrypted_character)
 
-            # Optional: Stop decoding if a certain condition is met (e.g., null character)
+            # Stop decoding if the termination character is found
             if decrypted_character == '\x00':
                 break
 
             k += 1
 
-        # Optional: Stop decoding if a certain condition is met (e.g., null character)
         if decrypted_character == '\x00':
             break
 
-    # Join the decrypted message list into a string, removing any potential null character at the end
+    # Join the decrypted message list into a string, removing the termination character
     decrypted_message = ''.join(decrypted_message).rstrip('\x00')
 
     print(f"Decrypted message: {decrypted_message}")
