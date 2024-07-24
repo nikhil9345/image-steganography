@@ -42,8 +42,8 @@ def decode_message_column_wise(original_image_path, encrypted_image_path, passwo
 
     # Join the decrypted message list into a string, removing the termination character
     decrypted_message = ''.join(decrypted_message).rstrip('\x00')
-
-    print(f"Decrypted message: {decrypted_message}")
+    print("Message decoded successfully.")
+    print(f"Decoded message: {decrypted_message}")
 
 # Usage
 original_image_path = "C:\Users\NIKHIL\OneDrive\Desktop\image steganography\images\bird img.png"
