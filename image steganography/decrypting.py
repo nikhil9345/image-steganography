@@ -46,7 +46,7 @@ def decode_message_column_wise(original_image_path, encrypted_image_path, passwo
     print(f"Decrypted message: {decrypted_message}")
 
 # Usage
-original_image_path = "E:\\Internship\\msd.jpg"
-encrypted_image_path = "E:\\Internship\\thala.png"
+original_image_path = "C:\Users\NIKHIL\OneDrive\Desktop\image steganography\images\bird img.png"
+encrypted_image_path = "C:\Users\NIKHIL\OneDrive\Desktop\image steganography\images\bird encrypted img.jpg"
 password = input("Enter the passcode: ")
 decode_message_column_wise(original_image_path, encrypted_image_path, password)
