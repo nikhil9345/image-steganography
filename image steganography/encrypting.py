@@ -41,8 +41,8 @@ def encode_message_column_wise(image_path, msg, password, output_path):
     print(f"Message has been encoded into '{output_path}'.")
 
 # Usage
-image_path = "E:\\Internship\\msd.jpg"
-output_path = "E:\\Internship\\thala.png"
+image_path = "C:\Users\NIKHIL\OneDrive\Desktop\image steganography\images\bird img.png"
+output_path ="C:\Users\NIKHIL\OneDrive\Desktop\image steganography\images\bird encrypted img.jpg"
 msg = input("Enter secret message: ")
 password = input("Enter a passcode: ")
 encode_message_column_wise(image_path, msg, password, output_path)
